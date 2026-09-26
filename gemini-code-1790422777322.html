@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Презентация: Торговля на Каспии и Стабилизатор EV3</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #0b1a30;
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+      min-height: 100vh;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    header h1 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: #0284c7;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    header p {
+      color: #94a3b8;
+      font-size: 1rem;
+      margin-top: 5px;
+    }
+    .slides-container {
+      width: 100%;
+      max-width: 900px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+    .slide {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 16px;
+      padding: 30px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(10px);
+      position: relative;
+      overflow: hidden;
+    }
+    .slide-number {
+      position: absolute;
+      top: 20px;
+      right: 25px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: #0284c7;
+      background: rgba(2, 132, 199, 0.1);
+      padding: 4px 12px;
+      border-radius: 20px;
+      border: 1px solid rgba(2, 132, 199, 0.2);
+    }
+    .slide h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 15px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #0284c7;
+      display: inline-block;
+    }
+    .slide p {
+      color: #cbd5e1;
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+    .slide ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .slide ul li {
+      position: relative;
+      padding-left: 24px;
+      color: #e2e8f0;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+    .slide ul li::before {
+      content: "•";
+      color: #0284c7;
+      font-size: 1.5rem;
+      position: absolute;
+      left: 5px;
+      top: -3px;
+    }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-top: 15px;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 12px;
+      padding: 15px;
+    }
+    .card h3 {
+      font-size: 1.1rem;
+      color: #0284c7;
+      margin-bottom: 8px;
+    }
+    .badge {
+      display: inline-block;
+      background: #0284c7;
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 0.8rem;
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin-bottom: 10px;
+    }
+    @media (max-width: 600px) {
+      .grid-2 {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Торговля на Каспии & LEGO EV3</h1>
+    <p>Проект автоматической системы стабилизации судов в штормовых условиях</p>
+  </header>
+
+  <div class="slides-container">
+
+    <!-- Слайд 1 -->
+    <div class="slide">
+      <span class="slide-number">Слайд 01</span>
+      <h2>Торговля на Каспийском море</h2>
+      <p>Каспийское море — ключевой логистический узел, связывающий страны Азии и Европы (коридор «Север — Юг»).</p>
+      <ul>
+        <li>Торговый флот перевозят миллионы тонн сухогрузов, нефти и контейнерных товаров.</li>
+        <li>Бесперебойная доставка грузов критически важна для экономики региона.</li>
+      </ul>
+    </div>
+
+    <!-- Слайд 2 -->
+    <div class="slide">
+      <span class="slide-number">Слайд 02</span>
+      <h2>Проблема: Каспийские Штормы</h2>
+      <p>Каспий славится резкими изменениями погоды и сильной бортовой качкой во время штормов.</p>
+      <div class="grid-2">
+        <div class="card">
+          <h3>Угрозы для судна</h3>
+          <p>Сильные волны создают риск смещения или потери контейнеров, а также повреждения корпуса.</p>
+        </div>
+        <div class="card">
+          <h3>Задержки в логистике</h3>
+          <p>Из-за качки корабли вынуждены снижать скорость или переждать шторм, сокрушая сроки поставок.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Слайд 3 -->
+    <div class="slide">
+      <span class="slide-number">Слайд 03</span>
+      <h2>Решение: Активные Стабилизаторы</h2>
+      <p>Для гашения качки на торговых судах применяются выдвижные подводные плавники и противовесы.</p>
+      <ul>
+        <li>Плавники изменяют угол атаки прямо во время движения корабля.</li>
+        <li>Создается гидродинамическая сила, которая гасит наклон от волны в противоположную сторону.</li>
+      </ul>
+    </div>
+
+    <!-- Слайд 4 -->
+    <div class="slide">
+      <span class="slide-number">Слайд 04</span>
+      <h2>Прототип на LEGO Mindstorms EV3</h2>
+      <span class="badge">Робототехника & Инженерия</span>
+      <p>Для демонстрации работы стабилизатора создана действующая модель на микрокомпьютере <b>LEGO EV3</b>.</p>
+      <ul>
+        <li><b>Гироскопический датчик (Gyro Sensor):</b> Измеряет угол наклона корабля и скорость качки.</li>
+        <li><b>Микрокомпьютер EV3 (Мозг):</b> Мгновенно обрабатывает данные и рассчитывает угол противодействия.</li>
+        <li><b>Сервомоторы:</b> Поворачивают рули/противовесы для удержания горизонтального баланса.</li>
+      </ul>
+    </div>
+
+    <!-- Слайд 5 -->
+    <div class="slide">
+      <span class="slide-number">Слайд 05</span>
+      <h2>Алгоритм Работы Системы</h2>
+      <p>Автоматический цикл реагирования на штормовую волну:</p>
+      <div class="grid-2">
+        <div class="card">
+          <h3>1. Детекция</h3>
+          <p>Гироскоп фиксирует отклонение корабля влево или вправо от линии горизонта.</p>
+        </div>
+        <div class="card">
+          <h3>2. Компенсация</h3>
+          <p>EV3 отдает команду моторам сдвинуть стабилизатор в противоположную сторону.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Слайд 6 -->
+    <div class="slide">
+      <span class="slide-number">Слайд 06</span>
+      <h2>Экономический Эффект</h2>
+      <p>Внедрение эффективных систем стабилизации напрямую помогает мировой и региональной торговле:</p>
+      <ul>
+        <li>Сохранение целостности перевозимых грузов и снижение страховых рисков.</li>
+        <li>Возможность безопасной навигации в сложных погодных условиях без простоя в портах.</li>
+      </ul>
+    </div>
+
+  </div>
+
+</body>
+</html>
